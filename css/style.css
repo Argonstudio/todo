@@ -1,0 +1,55 @@
+body {margin:10px; padding:0; font-family:arial;}
+
+.addTask {
+    width:300px; 
+    height:37px; 
+    font-size:16px;
+    border: none;
+    background: #7a7ae0;
+    color: #fff;
+    border-radius:16px;
+}
+
+
+.mainTools {text-align:center;}
+
+.tasks {width:300px; margin-left:auto; margin-right:auto;}
+
+
+.form {
+    width:300px; 
+    margin-left:auto; 
+    margin-right:auto; 
+    text-align:center;
+    padding: 0 0 10px 0;
+    font-size:16px;
+}
+
+.form input[type='button'] {
+    width:90px; 
+    height:26px;
+    font-size:14px;
+    border: none;
+    background: #7a7ae0;
+    color: #fff;
+    border-radius:16px;
+}
+.form input[type='text'] {width:250px;height:20px;border: 1px solid #c5c5c5;}
+
+.error {margin: 10px 0 0 0; border: 1px solid #ffb9b9; font-size:14px;}
+
+.task {width:300px; min-height:50px; border: 0px solid #eee;margin:20px 0 0 0;
+}
+
+.nameTaskClass {margin: 10px;}
+
+.tools {
+    width:97px; 
+    height:26px;
+    font-size:12px;
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #000;
+    border-radius:12px;
+    
+}

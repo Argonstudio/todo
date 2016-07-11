@@ -156,24 +156,16 @@
                     }
                     
                     arr.sort();//Сортируем массив
-                    
-                   var arr2 = [];
-                   var counter2 = 0;
                    
-                   //Делаем массив с обратным расположением элементов
-                    for(var i = numbersElements; i >= 0; i--)
-                    {
-                        arr2[i] = arr[counter2];
-                        counter2++;
-                        
-                    }
+                   //Делаем массив с обратной сортировкой 
+                   var arrReverse = arr.reverse();
                     
                     var placeInArrayNewName;
                     
                     //Ищем расположение в массиве имени новой задачи
-                    for(var i = 0; i < arr2.length; i++)
+                    for(var i = 0; i < arrReverse.length; i++)
                     {
-                        if(arr2[i] == task.childNodes[0].querySelector('b').innerHTML) placeInArrayNewName = i;
+                        if(arrReverse[i] == task.childNodes[0].querySelector('b').innerHTML) placeInArrayNewName = i;
                     }
                     
                     tasks.insertBefore(task,tasks.children[placeInArrayNewName])

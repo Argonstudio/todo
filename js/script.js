@@ -138,14 +138,14 @@
                    
                    var arr = [];
                    var counter = 0;
-                   var elementInArray = false;
+                   var elementInArray;
                    
                    //Собираем все имена задач в массив
                     for(var i = 0; i < listNames.length; i++)
                     {
                         arr[i] = listNames[i].querySelector('b').innerHTML;
                         counter++;
-                        if(listNames[i].querySelector('b').innerHTML == task.childNodes[0].querySelector('b').innerHTML) elementInArray = true;
+                        if(listNames[i].querySelector('b').innerHTML == task.childNodes[0].querySelector('b').innerHTML) elementInArray = i;
                     }
                     
                     var numbersElements = listNames.length-1;
@@ -168,7 +168,8 @@
                         if(arrReverse[i] == task.childNodes[0].querySelector('b').innerHTML) placeInArrayNewName = i;
                     }
                     
-                    tasks.insertBefore(task,tasks.children[placeInArrayNewName])
+                    if(!(elementInArray) || elementInArray > placeInArrayNewName) tasks.insertBefore(task,tasks.children[placeInArrayNewName])
+                    else tasks.insertBefore(task,tasks.children[placeInArrayNewName+1])
                     
                     
                }else tasks.insertBefore(task,tasks.children[0]); 
